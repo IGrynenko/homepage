@@ -13,6 +13,20 @@
         border-radius: 0.3em;
       }
     </style>
+    <script>
+      function clickBody(e) {
+        let sounds = [
+          "http://soundbible.com/grab.php?id=177&type=mp3",
+          "http://soundbible.com/grab.php?id=1876&type=mp3",
+          "http://soundbible.com/grab.php?id=1726&type=mp3",
+          "http://soundbible.com/grab.php?id=991&type=mp3",
+          "http://soundbible.com/grab.php?id=441&type=mp3",
+        ];
+        let num = Math.floor(Math.random() * 5);
+        let audio = new Audio(sounds[num]);
+        audio.play();
+      }
+    </script>
   </head>
   <body onmousedown="clickBody(event)">
     <main>
@@ -187,9 +201,9 @@
                 <section>
                   <h3>Languages&#x1F910;</h3>
                   <p class="tags small">
-                    <span class="language" lang="en"> <img width="5.5%" src="https://www.cia.gov/library/publications/the-world-factbook/attachments/flags/US-flag.gif"> ENGLISH</span>
-                    <span class="language" lang="zh"> <img width="5.5%" src="https://www.cia.gov/library/publications/the-world-factbook/attachments/flags/CH-flag.gif"> MANDARIN</span>
-                    <span class="language" lang="ja">	<img width="5.5%" src="https://www.cia.gov/library/publications/the-world-factbook/attachments/flags/JA-flag.gif"> JAPANESE</span>
+                    <span class="language" lang="en">&#x1f1fa;&#x1f1f8; ENGLISH</span>
+                    <span class="language" lang="zh">&#x1f1e8;&#x1f1f3; MANDARIN</span>
+                    <span class="language" lang="ja">&#x1f1ef;&#x1f1f5; JAPANESE</span>
                   </p>
                 </section>
                 <section>
@@ -231,19 +245,6 @@
           </div>
         </div>
       </article>
-      <script>
-        function clickBody(e) {
-          let sounds = [
-          "http://soundbible.com/grab.php?id=177&type=mp3",
-          "http://soundbible.com/grab.php?id=1876&type=mp3",
-          "http://soundbible.com/grab.php?id=1726&type=mp3",
-          "http://soundbible.com/grab.php?id=991&type=mp3",
-          "http://soundbible.com/grab.php?id=441&type=mp3",
-          ]
-          let num = Math.floor(Math.random() * 5);
-          let audio = new Audio(sounds[num]);
-          audio.play();
-        }
-      </script>
+    </main>
   </body>
 </html>
