@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <title>Résumé</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="me" href="mailto:ryuwins@gmail.com">
     <link rel="stylesheet" href="https://volodymyrkushnir.com/assets/stylesheets/base.css">
     <style>
       li.bg-color:hover
       {
-        background-color: yellow;
+        background-color: rgb(255, 255, 0, 0.84);
         border-radius: 0.3em;
       }
     </style>
   </head>
-  <body>
+  <body onmousedown="clickBody(event)">
     <main>
       <article>
         <div class="page" style="border-color: midnightblue;">
@@ -230,5 +231,19 @@
           </div>
         </div>
       </article>
+      <script>
+        function clickBody(e) {
+          let sounds = [
+          "http://soundbible.com/grab.php?id=177&type=mp3",
+          "http://soundbible.com/grab.php?id=1876&type=mp3",
+          "http://soundbible.com/grab.php?id=1726&type=mp3",
+          "http://soundbible.com/grab.php?id=991&type=mp3",
+          "http://soundbible.com/grab.php?id=441&type=mp3",
+          ]
+          let num = Math.floor(Math.random() * 5);
+          let audio = new Audio(sounds[num]);
+          audio.play();
+        }
+      </script>
   </body>
 </html>
